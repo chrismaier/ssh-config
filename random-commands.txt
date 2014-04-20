@@ -1,0 +1,19 @@
+http://packetpushers.net/using-wireshark-to-decode-ssltls-packets/
+
+https://www.sslshopper.com/article-most-common-openssl-commands.html
+
+http://rietta.com/blog/2012/01/27/openssl-generating-rsa-key-from-command/
+
+
+openssl genrsa -des3 -out ssh-key.pem 4096 
+openssl genrsa -des3 -out cloud-root-key.pem 4096 
+
+openssl rsa -in ssh-key.pem -out ssh-key.pem.nopass
+openssl rsa -in cloud-root-key.pem -out cloud-root-key.pem.nopass
+
+openssl rsa -in ssh-key.pem -outform PEM -pubout -out ssh-key.pub
+openssl rsa -in cloud-root-key.pem -outform PEM -pubout -out cloud-root-key.pub
+
+
+
+http://www.thinkplexx.com/learn/howto/security/ssh/ssh-key-authentication-specifying-alternative-identity-files-like-id_rsa-for-different-hosts

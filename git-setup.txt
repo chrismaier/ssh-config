@@ -1,0 +1,13 @@
+# git information for the ssh repository
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:chrismaier/ssh-config.git
+git push -u origin master
+
+
+# be sure to add an ignore file
+
+touch .gitignore 
