@@ -1,0 +1,37 @@
+
+
+# Generate a private key to use
+# 	we will use DES3
+#	our output file is "cloud-key.pem"
+#	we want a key with 4096 bits (2048 is common) 
+#
+#  ***  DO NOT LOSE YOUR PASSPHRASE  ***
+#
+
+openssl genrsa -des3 -out cloud-key.pem 4096 
+
+
+
+# In case we don't want the passphrase on the keyfile
+#	specify the key we just generated as the "in" file
+#	specify the output file that wont have a password
+#
+#  ***  Remember that passphrase you werent supposed to lose  ***
+#  ****  you will need the passphrase here....
+
+openssl rsa -in cloud-key.pem -out cloud-key.pem.nopass
+
+
+
+# Create a public key file / extract the public key from the pem
+#	pass in the key/pem we created in step one
+#	specify the output format you want
+#	***  BE SURE TO SPECIFY -pubout  ***
+#	(failure to specify -pubout exports the private key)
+#	specify the output file for the public key/pem
+#
+#  ***  Remember that passphrase you werent supposed to lose  ***
+#  ****  you will need the passphrase here....
+
+openssl rsa -in cloud-key.pem -outform PEM -pubout -out cloud-key.pub
+

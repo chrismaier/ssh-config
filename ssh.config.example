@@ -1,0 +1,33 @@
+# Example (semi-working) client ssh configuration file 
+
+StrictHostKeyChecking no
+
+# Which user do you want to connect as by default?
+User chris
+
+# Set up some parameters for our clients behavior
+ServerAliveCountMax=5
+ServerAliveInterval=15
+TCPKeepAlive=yes
+
+
+# Set up some alternate keys to be used with the specified systems
+Host di-web-n01
+ 
+  Hostname di-web-n01.drunkenidiot.org
+  User chris
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_dsa_drunkenidiot
+ 
+Host di-web-n02
+ 
+  Hostname di-web-n02.drunkenidiot.org
+  User chris
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_dsa_drunkenidiot
+
+
+
+# ***  !!DANGER WILL ROBINSON!!  ***
+
+
