@@ -17,3 +17,14 @@ openssl rsa -in cloud-root-key.pem -outform PEM -pubout -out cloud-root-key.pub
 
 
 http://www.thinkplexx.com/learn/howto/security/ssh/ssh-key-authentication-specifying-alternative-identity-files-like-id_rsa-for-different-hosts
+
+
+https://help.github.com/articles/generating-ssh-keys
+
+
+ssh-keygen -q -b 4096 -N '' -f /home/`whoami`/.ssh/id_rsa
+ssh-keygen -q -b 4096 -C 'chris.maier@rackspace.com' -N '' -f /home/`whoami`/.ssh/public_cloud_rsa
+
+http://linux.about.com/library/cmd/blcmdl1_ssh-keygen.htm
+http://www.akadia.com/services/ssh_test_certificate.html
+http://www.thegeekstuff.com/2012/08/iptables-log-packets/
