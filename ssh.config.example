@@ -29,5 +29,18 @@ Host di-web-n02
 
 
 # ***  !!DANGER WILL ROBINSON!!  ***
+Host di-blog-n01
 
+  Hostname di-blog-n01.drunkenidiot.org
+  User root
+  PreferredAuthentications publickey
+  dentityFile ~/.ssh/cloud-root-key.pem.nopass
+
+
+Host di-blog-n02
+
+  Hostname di-blog-n02.drunkenidiot.org
+  User root
+  PreferredAuthentications publickey
+  dentityFile ~/.ssh/cloud-root-key.pem.nopass
 
